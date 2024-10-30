@@ -16,6 +16,7 @@ import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import ForgotPasswordForm from './components/ForgotPasswordForm';
 import Footer from './components/Footer';
+import ChatAgent from './components/ChatAgent';
 
 // Import styles in specific order for proper cascading
 // 1. Base styles (CSS variables, resets, and global styles)
@@ -78,6 +79,8 @@ const AppContent = ({ isDarkMode, toggleDarkMode }) => {
         </Routes>
       </main>
       <Footer />
+      <ChatAgent />
+
     </div>
   );
 };
