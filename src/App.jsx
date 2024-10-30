@@ -17,6 +17,7 @@ import SignupForm from './components/SignupForm';
 import ForgotPasswordForm from './components/ForgotPasswordForm';
 import Footer from './components/Footer';
 import ChatAgent from './components/ChatAgent';
+import RippleEffect from './components/RippleEffect';
 
 // Import styles in specific order for proper cascading
 // 1. Base styles (CSS variables, resets, and global styles)
@@ -57,6 +58,7 @@ const AppContent = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <div className={`wrapper ${isContactPage ? 'contact-page-active' : ''} ${isAuthPage ? 'auth-page-active' : ''}`}>
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <RippleEffect />
       <main style={{ backgroundColor: (isContactPage || isAuthPage) ? 'var(--color-background)' : '' }}>
         <Routes>
           <Route path="/" element={
