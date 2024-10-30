@@ -63,7 +63,7 @@ const Newsletter = () => {
         className="bounce-animation"
       />
       <h2>Subscribe to our newsletter to stay informed about latest updates</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <div className="input-group">
           <div className="input-wrapper">
             <i className="fas fa-envelope"></i>
