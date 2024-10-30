@@ -84,9 +84,21 @@ const ContactPage = () => {
         throw new Error('Submission failed');
       }
 
+      // Log the raw response status
+      console.log('Response status:', response.status);
+      
+      // Check if there's actually content to parse
+      const text = await response.text();
+      console.log('Raw response:', text);
+      
+      // Only try to parse as JSON if there's content
+      const data = text ? JSON.parse(text) : {};
+      console.log('API Response:', data);
+
       setSubmitStatus({ type: 'success', message: 'Form submitted successfully!' });
       setFormData({ fullname: '', email: '', specialist: '' });
     } catch (error) {
+      console.error('Error details:', error);
       setSubmitStatus({ type: 'error', message: `Failed to submit form: ${error.message}` });
     }
   };

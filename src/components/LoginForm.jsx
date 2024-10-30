@@ -31,7 +31,7 @@ const LoginForm = () => {
         <h2>Sign In</h2>
         <p className="login-subtitle">Welcome back! Please sign in to continue.</p>
         
-        <form onSubmit={handleSubmit} className="login-form">
+        <form onSubmit={handleSubmit} className="login-form" noValidate>
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <div className="input-wrapper">

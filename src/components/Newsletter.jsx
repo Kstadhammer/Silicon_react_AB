@@ -20,20 +20,38 @@ const Newsletter = () => {
     }
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
 
-      // Simulated successful subscription
-      console.log('Newsletter subscription simulated for:', email);
+      console.log('Response Status:', response.status);
+      console.log('Response Headers:', Object.fromEntries(response.headers));
+
+      const contentType = response.headers.get('content-type');
+      let data;
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        const textResponse = await response.text();
+        console.log('Response Text:', textResponse);
+        data = { message: textResponse || 'Thank you for subscribing to our newsletter!' };
+      }
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Subscription failed');
+      }
+
+      console.log('Subscription successful:', data);
       setEmail('');
       setError('');
-      setSuccessMessage('Thank you for subscribing to our newsletter!');
-
-      // Log the API issue for debugging
-      console.warn('Note: API is not functioning. Subscription simulated.');
+      setSuccessMessage(data.message || 'Thank you for subscribing to our newsletter!');
     } catch (error) {
-      console.error('Error in newsletter subscription simulation:', error);
-      setError('An unexpected error occurred. Please try again later.');
+      console.error('Error in newsletter subscription:', error);
+      setError(error.message || 'An unexpected error occurred. Please try again later.');
     }
   };
 
