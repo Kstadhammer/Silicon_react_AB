@@ -208,6 +208,10 @@ header .container {
     .logo img {
         height: 28px;
     }
+    .auth-container {
+        display: none;
+    }
+    
 }
 
 

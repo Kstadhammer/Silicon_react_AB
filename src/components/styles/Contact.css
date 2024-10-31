@@ -18,8 +18,8 @@
 body.dark-mode .contact-form-wrapper input,
 body.dark-mode .contact-form-wrapper select {
 
-    background: rgba(255, 255, 255, 0.04);
-    color: #FFFFFF;
+    background-color: #e2e5f1;
+    color: #565973;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
