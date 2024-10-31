@@ -112,7 +112,7 @@ const ChatAgent = () => {
       {isOpen && (
         <div className="chat-window">
           <div className="chat-header">
-            <h3>Financial Assistant</h3>
+            <h3>Customer Support</h3>
             <button onClick={toggleChat}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
