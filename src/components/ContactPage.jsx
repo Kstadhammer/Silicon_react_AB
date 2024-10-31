@@ -6,11 +6,11 @@ import './styles/Contact.css';
 
 const ContactPage = () => {
   useEffect(() => {
-    // Set header and body background on mount
-/*     document.querySelector('header').style.backgroundColor = '#F3F6FF';
+    
+  /*   document.querySelector('header').style.backgroundColor = '#F3F6FF';
     document.body.style.backgroundColor = '#FFFFFF';
+    
      */
-    // Reset on unmount
     return () => {
       document.querySelector('header').style.backgroundColor = '';
       document.body.style.backgroundColor = '';
