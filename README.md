@@ -91,6 +91,7 @@ silicon-react/
 - Hans och Joakim för lärorika videos i Javascript och React.
 - Min kusin för hjälp med kodstruktur och annan hjälp, speciellt när det kom till att hämta data från API, Då mina kunskaper i JS och React är ganska färska.
 - Claude AI för felsökning och hjälp med kodstruktur, förbättrad design och hjälp med att förstå React.
+- Chatbot från https://github.com/Amaan9136/chatbot-with-js/blob/main/script.js
 
 
 
