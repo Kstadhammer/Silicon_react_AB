@@ -135,7 +135,7 @@ const ChatAgent = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-              placeholder="Type your financial question..." 
+              placeholder="Type your message..." 
             />
             <button 
               className="send-button" 

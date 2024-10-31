@@ -314,7 +314,7 @@ body.dark-mode .hero {
 
 /* Dark mode styles */
 body.dark-mode .dropdown-login-form {
-  background-color: var(--color-gray800);
+  background-color: #33354D;
   border: 1px solid var(--color-gray700);
 }
 
